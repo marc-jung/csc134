@@ -10,5 +10,7 @@ Marc Jung
 using_namespace std;
 
 int main() {
+
     return 0;
+    
 }
