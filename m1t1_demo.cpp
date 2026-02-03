@@ -10,7 +10,11 @@ Marc Jung
 using_namespace std;
 
 int main() {
-
+    //Greet the user
+    cout << "Hello, user!" << endl; // this is "endLine"
+    cout << "Whats's your name?" << endl;
+    string  name;
+    cin  >> name;
+    cout << "Nice to eet you, " << name << endl;
     return 0;
-    
 }
