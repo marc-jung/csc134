@@ -7,7 +7,7 @@ Marc Jung
 
 //magic words
 #include <iostream>
-using_namespace std;
+using namespace std;
 
 int main() {
     //Greet the user
