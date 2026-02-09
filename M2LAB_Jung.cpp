@@ -3,12 +3,14 @@
 // Marc Jung
 // 2026 FEB 08
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
 
     string first_name, last_name, full_name; // holds customer name
     string product = "redbull";
+    int amount;
     double cost_each = 0.99;
     double total_cost;
 
@@ -22,9 +24,18 @@ int main() {
     cout << "Nice to me meet you, " << full_name << endl;
 
     //Ask how much they like
+    cout << "How many " << product << " would you like today? ";
+    cin >> amount;
 
     //calculate total cost
+    total_cost = amount * cost_each;
+    //Formatting: set all proces to 2 decimal points
+    cout << setprecision(2) << fixed;
+
     //Give the result
+    cout << "For " << amount << " " << product << endl;
+    cout << "That will be: $" << total_cost << endl;
+    cout << "Thank you for shopping with us!" << endl;
 
     cout << endl;
     return 0; // no errors
