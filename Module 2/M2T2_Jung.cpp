@@ -44,7 +44,8 @@ int main() {
     cout << "Tip: \t\t$" << tip_amt << endl;
     cout << "Tax: \t\t$" << tax_amt << endl;
     cout << "-------------------------" << endl;
-    
+    cout << "Total: \t\t$" << total_price << endl;
+    cout << "THANK YOU COME AGAIN" << endl;
 
     return 0; // no errors
 }
