@@ -28,12 +28,12 @@ int main() {
 
     //Calculate
     double volume = length * width * heigth;    //volume of crate
-    cout << "The volume of the crate is: " << volume << endl;
     cost = cost_per_c3 * volume;                //caluclating the cost of the build
     charge = charge_per_c3 * volume;            //calculating what to charge customer
     profit = charge - cost;                     //calculating profit
 
     //Display the data
+    cout << "The volume of the crate is: " << volume << endl;
     cout << "It cost us $" << cost << " to make this build." << endl;
     cout << "Your total charge will be $" << charge << endl;
     cout << "Our profit is $" << profit << endl;
