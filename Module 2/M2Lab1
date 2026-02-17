@@ -14,7 +14,7 @@ int main() {
     double cost_per_c3 = 0.23;
     double charge_per_c3 = 0.5;
     double length, width, height;
-    int volume = length * width * height;
+    double volume = length * width * height;
     double cost;
     double charge; 
     double profit = charge - cost; 
@@ -26,6 +26,6 @@ int main() {
     //Calculate
 
     //Display
-    
-    return 0;
+
+    return 0;       //no errors
 }
