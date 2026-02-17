@@ -4,24 +4,28 @@ Marc Jung
 
 */
 #include <iostream>
-#include <iomanips>
+#include <iomanip>
+using namespace std;
 
-//declare variables with precision 2
-cout << setprecision(2) << fixed
-double cost_per_c3 = 0.23;
-double charge_per_c3 = 0.5;
-double length, width, height;
-int volume = length * width * height;
-double cost;
-double charge; 
-double profit = charge - cost; 
-
-//Ask user to enter dimensions of the crate
-
-//Calculate
-
-//Display the data
 int main() {
 
+    //declare variables with precision 2
+    cout << setprecision(2) << fixed
+    double cost_per_c3 = 0.23;
+    double charge_per_c3 = 0.5;
+    double length, width, height;
+    int volume = length * width * height;
+    double cost;
+    double charge; 
+    double profit = charge - cost; 
+
+    //Ask user to enter dimensions of the crate
+    cout << "Enter the dimensions for the length, width, and height: ";
+    cin >> length, width, height; 
+
+    //Calculate
+
+    //Display
+    
     return 0;
 }
