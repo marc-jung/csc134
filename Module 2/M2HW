@@ -1,0 +1,14 @@
+/*
+CSC 134
+MSHW1 - GOLD
+MARC JUNG
+2026 FEB 17
+*/
+
+
+
+int main() {
+
+    cout << "Question 1\n";
+    return 0;
+}
