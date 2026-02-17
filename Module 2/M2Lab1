@@ -1,0 +1,27 @@
+/*
+CSC 134
+Marc Jung
+
+*/
+#include <iostream>
+#include <iomanips>
+
+//declare variables with precision 2
+cout << setprecision(2) << fixed
+double cost_per_c3 = 0.23;
+double charge_per_c3 = 0.5;
+double length, width, height;
+int volume = length * width * height;
+double cost;
+double charge; 
+double profit = charge - cost; 
+
+//Ask user to enter dimensions of the crate
+
+//Calculate
+
+//Display the data
+int main() {
+
+    return 0;
+}
