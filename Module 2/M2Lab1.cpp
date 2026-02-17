@@ -10,7 +10,7 @@ using namespace std;
 int main() {
 
     //declare variables with precision 2
-    cout << setprecision(2) << fixed
+    cout << setprecision(2) << fixed;
     double cost_per_c3 = 0.23;
     double charge_per_c3 = 0.5;
     double length, width, height;
