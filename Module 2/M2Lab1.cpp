@@ -1,7 +1,8 @@
 /*
 CSC 134
 Marc Jung
-
+M2LAB is an assignment used to calculate the volume of the crate
+and display the corresponding data using user input
 */
 #include <iostream>
 #include <iomanip>
@@ -10,13 +11,13 @@ using namespace std;
 int main() {
 
     //declare variables with precision 2
-    cout << setprecision(2) << fixed;
-    double cost_per_c3 = 0.23;              //cost per cubic feet
-    double charge_per_c3 = 0.5;             //charge per cubic feet
+    cout << setprecision(2) << fixed << showpoint;
+    const double cost_per_c3 = 0.23;              //cost per cubic feet
+    const double charge_per_c3 = 0.5;             //charge per cubic feet
     double length, width, heigth;       
-    double cost;                            //cost of crate 
-    double charge;                          //charge of crate
-    double profit;                          //profit from selling crate
+    double cost;                                  //cost of crate 
+    double charge;                                //charge of crate
+    double profit;                                //profit from selling crate
 
     //Ask user to enter dimensions of the crate
     cout << "Enter the dimensions for the length: ";
@@ -33,7 +34,7 @@ int main() {
     profit = charge - cost;                     //calculating profit
 
     //Display the data
-    cout << "The volume of the crate is: " << volume << endl;
+    cout << "The volume of the crate is " << volume << " cubic feet.\n";
     cout << "It cost us $" << cost << " to make this build." << endl;
     cout << "Your total charge will be $" << charge << endl;
     cout << "Our profit is $" << profit << endl;
