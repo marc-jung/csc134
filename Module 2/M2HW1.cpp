@@ -9,6 +9,7 @@ MARC JUNG
 #include <iomanip>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 using namespace std;
 
 
@@ -18,8 +19,8 @@ int main() {
     //Declare variables needed
     cout << setprecision(2) << fixed;
     double balance;
-    double amount
-    string act_name; 
+    double amount;
+    string act_name;
     char choice;
 
     //USER INPUT
@@ -72,7 +73,8 @@ int main() {
                 cout << "Invalid amount. Withdrawal must be positive." << endl;
             }
         } else if (choice == 'q') {
-            cout << "Thank you for using the Bank Program. Goodbye!" << endl;
+            cout << "Thank you for using our service. \nYour current balance is $" << balance;
+            cout << endl << "Goodbye " << act_name;
             break; // Exit the while loop
         } else {
             cout << "Invalid choice. Please enter D, W, or Q." << endl;
