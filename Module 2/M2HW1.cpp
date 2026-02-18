@@ -17,13 +17,13 @@ int main() {
     cout << "Question 1 \n" << endl; 
     //Declare variables needed
     cout << setprecision(2) << fixed;
-    double start_act_bal, fin_act_bal;
-    double deposit, withdrawal; 
+    double balance;
+    double amount
     string act_name; 
-    char yn, yn2;
+    char choice;
 
     //USER INPUT
-    cout << "Hello, please input your first name below. \n" << act_name;
+    cout << "Hello, please input your name below. \n" << act_name;
     cin >> act_name; 
 
     //generate a random account number
@@ -36,38 +36,47 @@ int main() {
 
     //Ask the user what their account balance is
     cout << "Please type in you account balance: $";
-    cin >> start_act_bal;
+    cin >> balance;
 
     //Ask the user if they want to deposit or withdraw money from account
-    cout << "Hello " << act_name << ". Do you want to make a deposit? (y/n): ";
-    cin >> yn;
-    if (yn == 'n' || 'N')
-    {
-        cout << "Do you want to make a withdrawal? (y/n): "; 
-        cin >> yn2;
-        if (yn2 == 'y' || 'Y')
-        {
-            cout << "Please input how much you like to withdraw: $";
-            cin >> withdrawal;
-            fin_act_bal = start_act_bal - withdrawal;
-            cout << "Your account balance is $" << fin_act_bal;
-            cout << "\nHave a good day " << act_name;
-            return 0;
+    while (true) {
+        cout << "\nWould you like to (D)eposit, (W)ithdraw, or (Q)uit? ";
+        cin >> choice;
+
+        // Convert choice to lowercase for easier comparison
+        choice = tolower(choice);
+
+        // Outer if statement for the main menu options
+        if (choice == 'd') {
+            cout << "Enter deposit amount: $";
+            cin >> amount;
+            // Nested if statement for deposit validation (e.g., positive amount)
+            if (amount > 0) {
+                balance += amount;
+                cout << "Deposit successful. New balance: $" << balance << endl;
+            } else {
+                cout << "Invalid amount. Deposit must be positive." << endl;
+            }
+        } else if (choice == 'w') {
+            cout << "Enter withdrawal amount: $";
+            cin >> amount;
+            // Nested if statements for withdrawal validation
+            if (amount > 0) {
+                if (amount <= balance) { // Check if sufficient funds
+                    balance -= amount;
+                    cout << "Withdrawal successful. New balance: $" << balance << endl;
+                } else {
+                    cout << "Insufficient funds. Current balance: $" << balance << endl;
+                }
+            } else {
+                cout << "Invalid amount. Withdrawal must be positive." << endl;
+            }
+        } else if (choice == 'q') {
+            cout << "Thank you for using the Bank Program. Goodbye!" << endl;
+            break; // Exit the while loop
+        } else {
+            cout << "Invalid choice. Please enter D, W, or Q." << endl;
         }
-        else 
-        {
-            fin_act_bal = start_act_bal;
-            cout << "Your account balance is $" << fin_act_bal;
-            cout << "\nHave a good day " << act_name;
-            return 0;
-        }
-    }
-    else if (yn == 'y' || 'Y')
-    {
-        cout << "Please input how much you like to deposit: ";
-        cin >> deposit;
-        fin_act_bal = start_act_bal + deposit;
-        cout << "Your account balance is: " << fin_act_bal;
     }
 
     return 0;
