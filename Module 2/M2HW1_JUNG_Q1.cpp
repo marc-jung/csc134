@@ -18,7 +18,7 @@ int main() {
 
     cout << "Question 1 \n" << endl; 
     //Declare variables needed
-    cout << setprecision(2) << fixed;
+    cout << setprecision(2) << fixed << showpoint;
     double balance;
     double amount;
     string act_name;
