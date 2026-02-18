@@ -3,6 +3,7 @@ CSC 134
 MSHW1 - GOLD
 MARC JUNG
 2026 FEB 17
+Question 1 Write a program that simulates banking transactions
 */
 
 #include <iostream>
@@ -25,7 +26,7 @@ int main() {
 
     //USER INPUT
     cout << "Hello, please input your name below. \n" << act_name;
-    cin >> act_name; 
+    getline(cin, act_name);
 
     //generate a random account number
     //Seed with current time to ensure unique numbers
