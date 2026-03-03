@@ -15,11 +15,11 @@ int main() {
 
     //ask for user input
     cout << "Please enter the length and width of the first\n";
-    cout << " rectangle seperated by a space or a newline." << endl;
+    cout << "rectangle seperated by a space or a newline." << endl;
     cin >> lengthOne >> widthOne;
 
     cout << "Please enter the length and width of the second\n";
-    cout << " rectangle seperated by a space or a newline." << endl;
+    cout << "rectangle seperated by a space or a newline." << endl;
     cin >> lengthTwo >> widthTwo;
 
     //calculate the answer
