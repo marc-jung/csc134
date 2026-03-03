@@ -1,3 +1,8 @@
+/*
+CSC 134
+Marc Jung
+Question 3 Pizza Party
+*/
 #include <iostream>
 #include <iomanip>
 using namespace std;
