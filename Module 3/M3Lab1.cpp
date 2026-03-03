@@ -1,7 +1,7 @@
 /*
 Marc Jung
 CSC 134
-FIght or RuN Choice
+FIght or Run Choice
 */
 
 
