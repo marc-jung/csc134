@@ -18,5 +18,20 @@ int main() {
     cout << "How many visitors are there? ";
     cin >>  numVisitors;
 
+    //Calculate how many slices you need for the pizza party
+    int slicesNeeded = numPizzas * slicesperpizza;
+    int pizzaNeeded = numVisitors * slicespervisitor;
+    int difference = slicesNeeded - pizzaNeeded;
+
+    if (difference >= 0)
+    {
+        cout << "There will be " << difference << " slices of pizza left over. \n";
+    }
+    else 
+    {
+        cout << "There is not enough pizza for everybody. You are short by ";
+        cout << pizzaNeeded - slicesNeeded << " slices. \nOrder more pizza." << endl;
+    }
+
     return 0;
 }
