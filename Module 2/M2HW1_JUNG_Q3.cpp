@@ -9,11 +9,14 @@ int main() {
     const int slicespervisitor = 3;
     
     //user input
-    cout << "How many slices of pizza did you order? ";
+    cout << "How many pizzas did you order? ";
     cin >> numPizzas;
     
     cout << "How many slices are there per pizza? ";
     cin >> slicesperpizza;
+
+    cout << "How many visitors are there? ";
+    cin >>  numVisitors;
 
     return 0;
 }
