@@ -113,8 +113,41 @@ void question2() {
     cout << "THANK YOU COME AGAIN" << endl;
 }
 void question3() {
-    int age = 30;
-    cout << "Question 3 goes here" << endl;
+    string choice1, choice2;
+
+    cout << "WELCOME TO Dungeon Crawl!" << endl;
+    cout << "You are walking through a dungeon." << endl;
+    cout << "You see two paths ahead." << endl;
+    cout << "Do you go LEFT or RIGHT?" << endl;
+    cin >> choice1;
+
+    if (choice1 == "left" || choice1 == "LEFT") {
+        cout << "Oh no! You fell into a hidden trap." << endl;
+        cout << "GAME OVER." << endl;
+    }
+    else if (choice1 == "right" || choice1 == "RIGHT") {
+
+        cout << "You safely walk down the path and see a room." << endl;
+        cout << "Do you ENTER the room or RUN away?" << endl;
+        cin >> choice2;
+
+        if (choice2 == "enter" || choice2 == "ENTER") {
+            cout << "Inside the castle you find a treasure chest!" << endl;
+            cout << "YOU WIN!" << endl;
+        }
+        else if (choice2 == "run" || choice2 == "RUN") {
+            cout << "A dragon spots you while you run away." << endl;
+            cout << "You were defeated!" << endl;
+        }
+        else {
+            cout << "You hesitated too long and something finds you..." << endl;
+            cout << "DEFEAT." << endl;
+        }
+    }
+    else {
+        cout << "You wander aimlessly and get lost in the forest." << endl;
+        cout << "GAME OVER." << endl;
+    }
 }
 void question4() {
     int age = 30;
