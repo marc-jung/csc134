@@ -5,6 +5,8 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 // Function prototypes (declarations)
@@ -13,14 +15,16 @@ using namespace std;
 // This is a "method signature" or a "function declaration"
 void question1();
 void question2();
+void question3();
+void question4();
 
 // main
 int main() {
-    cout << "Example of HW" << endl;
+    cout << "M3HW" << endl;
     cout << "1. Question 1" << endl;
     cout << "2. Question 2" << endl;
-    cout << "2. Question 3" << endl;
-    cout << "2. Question 4" << endl;
+    cout << "3. Question 3" << endl;
+    cout << "4. Question 4" << endl;
     cout << "0. Exit" << endl;
     int choice;
     cin >> choice;
@@ -54,7 +58,7 @@ void question1() {
     cout << "Hello, I'm a C++ program!" << endl;
     cout << "Do you like me? Please type yes or no." << endl;
 
-    getline(cin, answer);
+    cin >> answer;
 
     if (answer == "yes") {
         cout << "That's great! I'm sure we'll get along." << endl;
@@ -150,6 +154,29 @@ void question3() {
     }
 }
 void question4() {
-    int age = 30;
-    cout << "Question 4 goes here" << endl;
+    int num1, num2;
+    int user_answer;
+    int correct_answer;
+
+    // initialize random number generator
+    srand(time(0));
+
+    // generate two random single digit numbers (0-9)
+    num1 = rand() % 10;
+    num2 = rand() % 10;
+
+    // calculate correct answer
+    correct_answer = num1 + num2;
+
+    // ask the question
+    cout << "What is " << num1 << " plus " << num2 << "?" << endl;
+    cin >> user_answer;
+
+    // check the answer
+    if (user_answer == correct_answer) {
+        cout << "Correct!" << endl;
+    } 
+    else {
+        cout << "Incorrect." << endl;
+    }
 }
