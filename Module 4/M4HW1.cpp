@@ -62,9 +62,6 @@ void question2(){
     //declare variables
     int choice;
 
-    cout << "Please input a number from 1 to 12: ";
-    cin >> choice;
-
     do
     {
     cout << "Please input a number from 1 to 12: ";
