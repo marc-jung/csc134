@@ -6,9 +6,6 @@ March 23 2026
 */
 
 #include <iostream>
-#include <iomanip>
-#include <cstdlib>
-#include <ctime>
 using namespace std;
 
 void question1();
@@ -80,5 +77,22 @@ void question2(){
 }  
 
 void question3() {
+    int choice;
+
+    do
+    {
+    cout << "Please input a number not between 1 to 12: ";
+    cin >> choice;
+    } while (choice >= 1 && choice <= 12);
+
+    int i = 1;
+    int answer;
+
+    while (i <= 12) {
+        answer = choice * i;
+        cout << choice << " times " <<
+        i << " is " << answer << endl;
+        i++;
+    }
 
 }
