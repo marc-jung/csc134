@@ -1,4 +1,5 @@
 /*
+CSC 134
 M4HW1 - Gold
 Marc Jung
 March 23 2026
@@ -39,20 +40,48 @@ int main()
     else {
         cout << "Not a valid choice." << endl;
     }
-    }
+}
 
 void question1() {
 
     //declare variables
     int firstNum, answer;
     firstNum = 5;
-    int i1 = 1;
+    int i = 1;
 
-    while (i1 <= 12) {
-        answer = firstNum * i1;
+    while (i <= 12) {
+        answer = firstNum * i;
         cout << firstNum << " times " <<
-        i1 << " is " << answer << endl;
-        i1++;
+        i << " is " << answer << endl;
+        i++;
     }
+
+}
+
+void question2(){
+    //declare variables
+    int choice;
+
+    cout << "Please input a number from 1 to 12: ";
+    cin >> choice;
+
+    do
+    {
+    cout << "Please input a number from 1 to 12: ";
+    cin >> choice;
+    } while (choice < 1 || choice > 12);
+
+    int i = 1;
+    int answer;
+
+    while (i <= 12) {
+        answer = choice * i;
+        cout << choice << " times " <<
+        i << " is " << answer << endl;
+        i++;
+    }
+}  
+
+void question3() {
 
 }
