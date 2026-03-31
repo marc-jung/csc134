@@ -48,6 +48,7 @@ string formatAnswwer(int my_answer) {
     string answerMessage;
     answerMessage = "The answer is ";
     answerMessage += to_string(my_answer);
+
     return answerMessage;
 }
 void printAnswer(string msg) {
