@@ -1,5 +1,6 @@
-// M5LAB2
-// Header goes here
+// M5LAB2 - Complete a Program
+// Marc Jung
+// Complete and Debug code provided
 
 #include <iostream>
 using namespace std;
