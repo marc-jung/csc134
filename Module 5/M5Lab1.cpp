@@ -108,7 +108,7 @@ void choice_go_up_stairs() {
     cout << "You went up the stairs." << endl; 
     cout << "There is a door" << endl;
     cout << "Do you:" << endl;
-    cout << "1. Try the door" << endl;
+    cout << "1. Try the door?" << endl;
     cout << "2. Give up and go home" << endl;
     int choice;
     cout << "Choose: ";
@@ -145,15 +145,18 @@ void choice_go_home() {
     cout << "Choose: ";
     cin >> choice;
     if (1 == choice) {
-        cout << "Your wish will be granted. Thank you for playing."
+        cout << "Your wish will be granted." << endl;
+    
     } 
     else if (2 == choice) {
         cout << "Your body was later discovered torn to pieces. " << endl;
-        cout << "Thank you for playing."
     }
     else {
     cout << "That's not a valid choice, please try again." << endl;
     cin.ignore(); // clear the user input
     choice_go_home();  // try again
+    return;
+    
   }
+
 }
