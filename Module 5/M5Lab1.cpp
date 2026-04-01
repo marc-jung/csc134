@@ -15,7 +15,9 @@ void main_menu();
 void choice_front_door();
 void choice_back_door();
 void choice_go_home();
-// TODO: add more choices here
+void choice_go_up_stairs();
+void choice_door();
+
 
 int main() {
   cout << "M5LAB1 - Choose Your Own Adventure" << endl;
@@ -69,8 +71,14 @@ void choice_front_door() {
   cin >> choice;
   if (1 == choice) {
     choice_back_door();
-  } else if (2 == choice) {
+  } 
+  else if (2 == choice) {
     choice_go_home();
+  }
+  else {
+    cout << "That's not a valid choice, please try again." << endl;
+    cin.ignore(); // clear the user input
+    choice_front_door();  // try again
   }
 }
 
@@ -80,8 +88,72 @@ void choice_back_door() {
     cout << "Do you:" << endl;
     cout << "1. Go up the stairs?" << endl;
     cout << "2. Give up and go home" << endl;
+    int choice;
+    cout << "Choose: ";
+    cin >> choice;
+    if (1 == choice) {
+        choice_go_up_stairs();
+    } 
+    else if (2 == choice) {
+        choice_go_home();
+    }
+    else {
+    cout << "That's not a valid choice, please try again." << endl;
+    cin.ignore(); // clear the user input
+    choice_back_door();  // try again
+  }
 }
 
-void choice_go_home() { cout << "TODO: Write something here" << endl; }
+void choice_go_up_stairs() { 
+    cout << "You went up the stairs." << endl; 
+    cout << "There is a door" << endl;
+    cout << "Do you:" << endl;
+    cout << "1. Try the door" << endl;
+    cout << "2. Give up and go home" << endl;
+    int choice;
+    cout << "Choose: ";
+    cin >> choice;
+    if (1 == choice) {
+        choice_door();
+    } 
+    else if (2 == choice) {
+        choice_go_home();
+    }
+    else {
+    cout << "That's not a valid choice, please try again." << endl;
+    cin.ignore(); // clear the user input
+    choice_go_up_stairs;  // try again
+  }
+}
 
-// any new choices go here
+void choice_door() {
+    cout << "You entered the room." << endl; 
+    cout << "Congrats! You found the artifact." << endl;
+    cout << "Now hurry up and run home." << endl;
+    choice_go_home();
+
+}
+
+void choice_go_home() { 
+    cout << "There is something waiting for you in your home." << endl; 
+    cout << "You need the aritfact." << endl;
+    cout << "Where is the artifact? It's getting impatient." << endl;
+    cout << "Do you:" << endl;
+    cout << "1. Have the artifact?" << endl;
+    cout << "2. Try to run?" << endl;
+    int choice;
+    cout << "Choose: ";
+    cin >> choice;
+    if (1 == choice) {
+        cout << "Your wish will be granted. Thank you for playing."
+    } 
+    else if (2 == choice) {
+        cout << "Your body was later discovered torn to pieces. " << endl;
+        cout << "Thank you for playing."
+    }
+    else {
+    cout << "That's not a valid choice, please try again." << endl;
+    cin.ignore(); // clear the user input
+    choice_go_home();  // try again
+  }
+}
