@@ -1,5 +1,6 @@
 /*
 CSC 134
+Gold
 Marc Jung
 M5Lab1 - Choose your own adventure
 */
