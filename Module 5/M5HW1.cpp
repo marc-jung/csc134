@@ -14,9 +14,10 @@ void q3();
 void q4();
 void q5();
 
-int main() {
+int main() 
+{
     int choice;
-    //user inputs choice in main menu
+
     do
     {
         cout << "\n===== MAIN MENU =====\n";
@@ -28,15 +29,66 @@ int main() {
         cout << "6. Exit\n";
         cout << "Enter your choice (1-6): ";
         cin >> choice;
-        // Check if input failed (non-integer) or is out of range
-        if (cin.fail() || choice < 1 || choice > 6) {
-            cin.clear(); // Clear the error state
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
-            cout << "Invalid input. Please try again." << std::endl;
-            choice = 0; // Ensure loop continues
-        }
-        while (choice < 1 || choice > 6);
 
-        cout << "You chose: " << choice << endl;
-        return 0;
+        // Input validation
+        if (cin.fail() || choice < 1 || choice > 6) 
+        {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            cout << "Invalid input. Please try again.\n";
+            continue;
+        }
+
+        // Call functions based on user choice
+        switch (choice)
+        {
+            case 1: q1(); break;
+            case 2: q2(); break;
+            case 3: q3(); break;
+            case 4: q4(); break;
+            case 5: q5(); break;
+            case 6: cout << "Exiting program...\n"; break;
+        }
+
+    } while (choice != 6);
+
+    return 0;
+}
+
+void q1() {
+    string m1, m2, m3;
+    double r1, r2, r3;
+
+    cout << "Enter month: ";
+    cin >> m1;
+    cout << "Enter rainfall for " << m1 << ": ";
+    cin >> r1;
+
+    cout << "Enter month: ";
+    cin >> m2;
+    cout << "Enter rainfall for " << m2 << ": ";
+    cin >> r2;
+
+    cout << "Enter month: ";
+    cin >> m3;
+    cout << "Enter rainfall for " << m3 << ": ";
+    cin >> r3;
+
+    double avg = (r1 + r2 + r3) / 3.0;
+
+    cout << fixed << setprecision(2);
+    cout << "The average rainfall for " << m1 << ", " << m2 << ", and " << m3
+         << " is " << avg << " inches.\n";
+}
+void q2() {
+    
+}
+void q3() {
+    
+}
+void q4() {
+   
+}
+void q5() {
+    
 }
