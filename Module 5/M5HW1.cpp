@@ -101,11 +101,133 @@ void q2() {
     
 }
 void q3() {
-    
+    int num;
+
+    // Keep prompting until valid input is entered
+    do
+    {
+        cout << "Enter a number (1 - 10): ";
+        cin >> num;
+
+        if (num < 1 || num > 10)
+        {
+            cout << "Invalid input. Please enter a number between 1 and 10.\n";
+        }
+
+    } while (num < 1 || num > 10);
+
+    cout << "Roman numeral: ";
+
+    switch (num)
+    {
+    case 1: cout << "I"; break;
+    case 2: cout << "II"; break;
+    case 3: cout << "III"; break;
+    case 4: cout << "IV"; break;
+    case 5: cout << "V"; break;
+    case 6: cout << "VI"; break;
+    case 7: cout << "VII"; break;
+    case 8: cout << "VIII"; break;
+    case 9: cout << "IX"; break;
+    case 10: cout << "X"; break;
+    }
+
+    cout << endl;
 }
 void q4() {
-   
+    int choice;
+
+    cout << "\nGeometry Calculator\n";
+    cout << "1. Area of Circle\n";
+    cout << "2. Area of Rectangle\n";
+    cout << "3. Area of Triangle\n";
+    cout << "4. Quit\n";
+    cout << "Enter your choice (1-4): ";
+    cin >> choice;
+
+    const double PI = 3.14159;
+
+    switch (choice)
+    {
+    case 1:
+    {
+        double radius;
+        cout << "Enter radius: ";
+        cin >> radius;
+
+        if (radius < 0)
+        {
+            cout << "The radius cannot be less than zero.\n";
+            return;
+        }
+
+        cout << "Area: " << PI * radius * radius << endl;
+        break;
+    }
+    case 2:
+    {
+        double length, width;
+        cout << "Enter length: ";
+        cin >> length;
+        cout << "Enter width: ";
+        cin >> width;
+
+        if (length < 0 || width < 0)
+        {
+            cout << "Length and width must be positive.\n";
+            return;
+        }
+
+        cout << "Area: " << length * width << endl;
+        break;
+    }
+    case 3:
+    {
+        double base, height;
+        cout << "Enter base: ";
+        cin >> base;
+        cout << "Enter height: ";
+        cin >> height;
+
+        if (base < 0 || height < 0)
+        {
+            cout << "Only enter positive values for base and height.\n";
+            return;
+        }
+
+        cout << "Area: " << base * height * 0.5 << endl;
+        break;
+    }
+    case 4:
+        cout << "Returning to main menu...\n";
+        break;
+
+    default:
+        cout << "The valid choices are 1 through 4.\n";
+    }
 }
+
 void q5() {
-    
+    double speed;
+    int hours;
+
+    cout << "Enter speed (mph): ";
+    cin >> speed;
+
+    cout << "Enter hours traveled: ";
+    cin >> hours;
+
+    if (speed < 0 || hours < 1)
+    {
+        cout << "Invalid input. Speed must be >= 0 and hours >= 1.\n";
+        return;
+    }
+
+    cout << "\nHour   Distance Traveled\n";
+    cout << "------------------------\n";
+
+    for (int i = 1; i <= hours; i++)
+    {
+        cout << i << "       " << speed * i << endl;
+    }
 }
