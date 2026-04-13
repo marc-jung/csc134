@@ -61,17 +61,17 @@ void q1() {
 
     cout << "Enter month: ";
     cin >> m1;
-    cout << "Enter rainfall for " << m1 << ": ";
+    cout << "Enter rainfall for " << m1 << " in inches: ";
     cin >> r1;
 
     cout << "Enter month: ";
     cin >> m2;
-    cout << "Enter rainfall for " << m2 << ": ";
+    cout << "Enter rainfall for " << m2 << " in inches: ";
     cin >> r2;
 
     cout << "Enter month: ";
     cin >> m3;
-    cout << "Enter rainfall for " << m3 << ": ";
+    cout << "Enter rainfall for " << m3 << " in inches: ";
     cin >> r3;
 
     double avg = (r1 + r2 + r3) / 3.0;
