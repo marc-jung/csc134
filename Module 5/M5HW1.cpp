@@ -42,11 +42,11 @@ int main()
         // Call functions based on user choice
         switch (choice)
         {
-            case 1: q1(); break;
-            case 2: q2(); break;
-            case 3: q3(); break;
-            case 4: q4(); break;
-            case 5: q5(); break;
+            case 1: q1(); cout << "Exiting program...\n"; break;
+            case 2: q2(); cout << "Exiting program...\n"; break;
+            case 3: q3(); cout << "Exiting program...\n"; break;
+            case 4: q4(); cout << "Exiting program...\n"; break;
+            case 5: q5(); cout << "Exiting program...\n"; break;
             case 6: cout << "Exiting program...\n"; break;
         }
 
@@ -81,6 +81,23 @@ void q1() {
          << " is " << avg << " inches.\n";
 }
 void q2() {
+    double width, length, height;
+
+    cout << "Enter width: ";
+    cin >> width;
+    cout << "Enter length: ";
+    cin >> length;
+    cout << "Enter height: ";
+    cin >> height;
+
+    if (width <= 0 || length <= 0 || height <= 0)
+    {
+        cout << "Error: All dimensions must be greater than 0.\n";
+        return;
+    }
+
+    double volume = width * length * height;
+    cout << "Volume of the block: " << volume << endl;
     
 }
 void q3() {
