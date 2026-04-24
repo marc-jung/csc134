@@ -3,8 +3,6 @@ CSC 134
 M6T1 - Loops and Arrays
 Marc Jung
 April 23 2026
-
-Do the same thing with while and for loops, for reference.
 */
 
 #include <iostream>
@@ -16,61 +14,72 @@ void method2();
 
 // main
 int main() {
-    // Count # of Pokemon per day, two different ways
+    // Count # of cars per day, two different ways
     method1();
     method2();
 
     return 0;
 }
 
-// function definitions
+// Part 1: No arrays
 void method1() {
-    // Method one - no arrays
-    // Count 5 days Pokemon, get total and average
-    cout << "Enter each Pokemon found per day." << endl;
-    cout << "Day 0 = Monday, Day 4 = Friday" << endl;
+    cout << "\n--- Part 1 (No Arrays) ---" << endl;
+    cout << "Enter number of cars counted each day (Mon–Fri)\n";
+
     const int SIZE = 5;
     int count = 0;
-    int poke_today;     // current value, to add
-    int poke_total = 0; // add up 
-    double poke_avg = 0;// average
+    int cars_today;
+    int total = 0;
+    double average = 0;
 
     while (count < SIZE) {
-        cout << "Day " << count << ": ";
-        cin >> poke_today;
-        poke_total += poke_today;
-        count++; // Move to next day
+        cout << "Day " << count + 1 << ": ";
+        cin >> cars_today;
+        total += cars_today;
+        count++;
     }
-    cout << "Total = " << poke_total << endl;
-    poke_avg = (double) poke_total / SIZE;
-    cout << "Average = " << poke_avg << endl;
+
+    average = (double) total / SIZE;
+
+    cout << "Total cars = " << total << endl;
+    cout << "Average per day = " << average << endl;
 }
 
+// Part 2: Using arrays + ASCII graph
 void method2() {
-    // Method 2 uses two arrays:
-    // Names of the days
-    // # pokemon found on the days
+    cout << "\n--- Part 2 (With Arrays + Graph) ---" << endl;
 
     const int SIZE = 5;
-    string days[SIZE] = {"M", "T", "W", "Th", "F"}; // initialized
-    int pokemon[SIZE]; // not initialized
-    int poke_total = 0;
-    double poke_avg = 0.0;
+    string days[SIZE] = {"M ", "T ", "W ", "Th", "F "};
+    int cars[SIZE];
+    int total = 0;
+    double average = 0;
 
-    for (int i=0; i < SIZE; i++) {
-        cout << "# on " << days[i] << ": ";
-        cin >> pokemon[i];
+    // Input
+    for (int i = 0; i < SIZE; i++) {
+        cout << "Cars on " << days[i] << ": ";
+        cin >> cars[i];
     }
-    // print output in "tabular" (table) format
-    cout << "Day\tPokemon" << endl;
-    for (int i=0; i < SIZE; i++) {
-        cout << days[i] << "\t" << pokemon[i] << endl;
-        // find the total
-        poke_total += pokemon[i];
-    }
-    // find total, print results
-    poke_avg = (double) poke_total / SIZE;
-    cout << "Total = " << poke_total << endl;
-    cout << "Average = " << poke_avg << endl;
 
+    // Output table + total
+    cout << "\nDay\tCars" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cout << days[i] << "\t" << cars[i] << endl;
+        total += cars[i];
+    }
+
+    average = (double) total / SIZE;
+
+    cout << "Total cars = " << total << endl;
+    cout << "Average per day = " << average << endl;
+
+    // ASCII Bar Chart
+    cout << "\n--- Bar Chart ---" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cout << days[i] << " | ";
+        for (int j = 0; j < cars[i]; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
 }
